@@ -3,12 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
     use HasFactory;
+
     // Các thuộc tính có thể gán hàng loạt
     protected $fillable = [
         'name', 'username', 'email', 'password', 'profile_picture', 'bio', 'birthdate', 'location',
@@ -50,9 +50,10 @@ class User extends Authenticatable
         return $this->hasMany(Like::class);
     }
 
-    public function notifications()
+    // Thêm phương thức newFactory
+    protected static function newFactory()
     {
-        return $this->hasMany(Notification::class);
+        return \Database\Factories\CustomerFactory::new();
     }
-
+   
 }

@@ -9,10 +9,10 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="flex items-center justify-center min-h-screen">
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
     <header class="absolute top-0 left-0 w-full p-4">
         <a href="{{ route('home') }}">
-            <img src="{{ asset('image/logo.png') }}" alt="Logo" class="h-12 w-auto">
+            <img src="{{ asset('image/VKU.jpg') }}" alt="Logo" class="h-12 w-auto">
         </a>
     </header>
 
