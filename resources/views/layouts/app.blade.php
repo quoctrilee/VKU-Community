@@ -14,7 +14,7 @@
             @include('components.left-sidebar')
         </div>
         <!-- Main Content -->
-        <div class="flex-1 flex justify-center  overflow-y-auto h-screen">
+        <div class="flex-1 flex justify-center h-screen">
             @yield('main')
         </div>
         <!-- Right Sidebar -->
