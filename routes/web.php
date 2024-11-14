@@ -21,4 +21,5 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::middleware('auth')->group(function () {
     Route::get('/', [PostController::class, 'index'])->name('home');
     Route::get('/load-more-posts', [PostController::class, 'loadMorePosts'])->name('load-more-posts');
+    Route::post('/like-post', [PostController::class, 'likePost'])->name('like-post');
 });
